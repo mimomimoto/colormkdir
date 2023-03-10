@@ -32,7 +32,7 @@ It can make directory in specified color. Also, it can manage color list by edit
 ```
 brew install mimomimoto/tap/colormkdir
 ```
-`colormkdir` use python3 and you should install some libraries.
+`colormkdir` use python3 and you need to install some libraries.
 
 ```
 pip install pyobjc pillow glob2
