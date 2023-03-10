@@ -9,11 +9,11 @@
     - [Use Homebrew](#use_homebrew)
     - [Manual Installation](#manual_installation)
 - [Usage](#usage)
-    - [Create color list](#Create_color_list)
-    - [Update color list](#Update_color_list)
-    - [Make directory in specified color](#Make_directory_in_specified_color)
-    - [Change directory color as specified color](#Change_directory_color_as_specified_color)
-    - [Help command](#Help_command)
+    - [Create color list](#create_color_list)
+    - [Update color list](#update_color_list)
+    - [Make directory in specified color](#make_directory_in_specified_color)
+    - [Change directory color as specified color](#change_directory_color_as_specified_color)
+    - [Help command](#help_command)
 
 # colormkdir
 `colormkdir` is a CLI for macOS to customize folder color. 
