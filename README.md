@@ -48,7 +48,7 @@ pip install pyobjc pillow glob2
 
 # Usage
 ## Create color list
-Color list is managed by JSON file. (In my case, the file path is '/opt/homebrew/Cellar/colormkdir/0.0.1/libexec/color_list.json') You need to decide `color name` and `color code` as shown below. (It is default definition)
+Color list is managed by JSON file. (If you use Homebrew, the file path is '/opt/homebrew/Cellar/colormkdir/0.0.1/libexec/color_list.json' in my case) You need to decide `color name` and `color code` as shown below. (It is default definition)
 ```
 {
     "r":"#ff0000",
