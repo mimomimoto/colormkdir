@@ -15,7 +15,7 @@ OPTIONS:
 
 updateIcon(){
 # set on your python path
-/usr/bin/python3 - "$1" << EOF
+"$1" - "$2" << EOF
 from PIL import Image
 import glob
 import os
@@ -54,7 +54,7 @@ EOF
 
 setFolderIcon(){
 # set on your python path
-/usr/bin/python3 - "$1" "$2" << EOF
+"$1" - "$2" "$3" << EOF
 import Cocoa
 import sys
 Cocoa.NSWorkspace.sharedWorkspace().setIcon_forFile_options_(Cocoa.NSImage.alloc().initWithContentsOfFile_(sys.argv[1]), sys.argv[2], 0)
@@ -62,6 +62,7 @@ EOF
 }
 
 absolute_path=$(cd $(dirname ${0}) && pwd)
+python_path=$(which python)
 
 flag_count=0
 h_flag="0"
@@ -96,7 +97,7 @@ if [ ${h_flag} = "1" ]; then
 fi
 
 if [ ${u_flag} = "1" ]; then
-    updateIcon "$absolute_path"
+    updateIcon "$python_path" "$absolute_path"
 fi
 
 if [ ${m_flag} = "1" ]; then 
@@ -115,7 +116,7 @@ if [ ${m_flag} = "1" ]; then
     mkdir $@
     FolderIcon="${absolute_path}""/icons/"${color}".icns"
     PathToSetIconFor=$@
-    setFolderIcon "$FolderIcon" "$PathToSetIconFor"
+    setFolderIcon "$python_path" "$FolderIcon" "$PathToSetIconFor"
 fi
 
 if [ ${c_flag} = "1" ]; then
@@ -133,5 +134,5 @@ if [ ${c_flag} = "1" ]; then
     fi
     FolderIcon="${absolute_path}""/icons/"${color}".icns"
     PathToSetIconFor=$@
-    setFolderIcon "$FolderIcon" "$PathToSetIconFor"
+    setFolderIcon "$python_path" "$FolderIcon" "$PathToSetIconFor"
 fi
