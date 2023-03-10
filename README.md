@@ -7,6 +7,11 @@
 - [Demo](#demo)
 - [Installation](#Installation)
 - [Usage](#usage)
+    - [Create color list](#Create_color_list)
+    - [Update color list](#Update_color_list)
+    - [Make directory in specified color](#Make_directory_in_specified_color)
+    - [Change directory color as specified color](#Change_directory_color_as_specified_color)
+    - [Help command](#Help_command)
 
 # colormkdir
 `colormkdir` is a CLI for macOS to customize folder color. 
@@ -16,6 +21,10 @@ It can make directory in specified color. Also, it can manage color list by edit
 ![demo.gif](https://user-images.githubusercontent.com/99246880/224244901-8ff520df-f383-4c35-a185-dba17773eabd.gif)
 
 # Installation
+**Supported platforms**
+
+* **macOS**
+
 Use [Homebrew](https://brew.sh/).
 
 ```
@@ -33,4 +42,38 @@ pip install glob2
 
 # Usage
 ## Create color list
+Color list is managed by JSON file. (In my case, the file path is '/opt/homebrew/Cellar/colormkdir/0.0.1/libexec/color_list.json') You need to decide `color name` and `color code` as shown below. (It is default definition)
+```
+{
+    "r":"#ff0000",
+    "b":"#1e90ff",
+    "g":"#3cb371",
+    "y":"#ffff00",
+    "p":"#9400d3",
+    "o":"#ff7f50"
+}
+```
+
+## Update color list
+After change color list, you need to run command for updating color list. 
+```
+colormkdir -u
+```
+
+## Make directory in specified color
+```
+colormkdir -m [value] <directory name>
+```
+[value] is `color name` defined in color list. If directory name is already exsisted, it will be error.
+
+## Change directory color as specified color
+```
+colormkdir -c [value] <directory name>
+```
+[value] is `color name` defined in color list. If directory name is not exsisted, it will be error.
+
+## Help command
+```
+colormkdir -h
+```
 
