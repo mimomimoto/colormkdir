@@ -14,7 +14,6 @@ OPTIONS:
 }
 
 updateIcon(){
-# set on your python path
 "$1" - "$2" << EOF
 from PIL import Image
 import glob
@@ -53,7 +52,6 @@ EOF
 }
 
 setFolderIcon(){
-# set on your python path
 "$1" - "$2" "$3" << EOF
 import Cocoa
 import sys
@@ -62,6 +60,7 @@ EOF
 }
 
 absolute_path=$(cd $(dirname ${0}) && pwd)
+# set on your python path
 python_path=$(which python)
 
 flag_count=0
