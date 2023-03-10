@@ -6,6 +6,8 @@
 - [colormkdir](#colormkdir)
 - [Demo](#demo)
 - [Installation](#Installation)
+    - [Use Homebrew](#use_homebrew)
+    - [Manual Installation](#manual_installation)
 - [Usage](#usage)
     - [Create color list](#Create_color_list)
     - [Update color list](#Update_color_list)
@@ -25,7 +27,7 @@ It can make directory in specified color. Also, it can manage color list by edit
 
 * **macOS**
 
-Use [Homebrew](https://brew.sh/).
+## Use Homebrew
 
 ```
 brew install mimomimoto/tap/colormkdir
@@ -33,10 +35,14 @@ brew install mimomimoto/tap/colormkdir
 `colormkdir` use python3 and you should install some libraries.
 
 ```
-pip install pyobjc
-pip install pillow
-pip install glob2
+pip install pyobjc pillow glob2
 ```
+## Manual Installation
+1. git clone this repository.
+2. Write PATH to `~/.zshrc`.
+3. Change `colormkdir` permission by using chmod.
+4. run `source ~/.zshrc`.
+5. `pip install pyobjc pillow glob2 `
 
 > `colormkdir` use your global python environment. If you don't want to install these libraries in your global environment, you should edit colormkdir.sh (line 64).
 
