@@ -61,7 +61,7 @@ EOF
 
 absolute_path=$(cd $(dirname ${0}) && pwd)
 # set on your python path
-python_path=$(which python)
+python_path=$(which python || which python3)
 
 flag_count=0
 h_flag="0"
